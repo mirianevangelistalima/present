@@ -1,0 +1,19 @@
+<div id="shooting-stars-container"></div>
+
+<div class="contador-de-amor">
+  <div class="stars"></div>
+  <div class="content">
+    <h1>Contador de Amor</h1>
+    @if (!selectedDate()) {
+    <p>Uma noite estrelada, passando tranquilamente.</p>
+
+    <button mat-mini-fab (click)="opencounter()">
+      <mat-icon>nights_stay</mat-icon>
+    </button>
+    }
+
+    <div style="color: aliceblue">
+      {{ textoResult() }}
+    </div>
+  </div>
+</div>
