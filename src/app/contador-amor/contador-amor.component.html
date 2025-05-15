@@ -1,16 +1,23 @@
-<!-- <div class="ceu" #ceuContainer></div> -->
 
-<h2 mat-dialog-title>Início do Nosso Universo</h2>
-<mat-dialog-content align="center">
-  <mat-form-field>
-    <mat-label>Big Bang</mat-label>
-    <input matInput [matDatepicker]="picker" [formControl]="date">
-    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
-  </mat-form-field>
-</mat-dialog-content>
-<mat-dialog-actions>
-  <button mat-button mat-dialog-close>Clear</button>
-  <button mat-button cdkFocusInitial  (click)="fecharComResultado()">Start</button>
-</mat-dialog-actions>
+ <div class="content">
+  <!-- <h2 mat-dialog-title class="title">Início do Nosso Universo</h2> -->
 
+  <mat-dialog-content class="content">
+    <p class="subtitle">
+      Selecione o dia do nosso <strong>Big Bang</strong> ✨
+    </p>
+
+    <mat-form-field appearance="fill" class="date-field">
+      <mat-label>Big Bang</mat-label>
+      <input matInput [matDatepicker]="picker" [formControl]="date" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancelar</button>
+    <button mat-flat-button color="primary"(click)="fecharComResultado()">Confirmar</button>
+  </mat-dialog-actions>
+
+</div>

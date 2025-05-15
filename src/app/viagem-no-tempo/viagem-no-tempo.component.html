@@ -1,0 +1,50 @@
+<div class="fundo">
+  <div
+    id="carrosel"
+    class="carousel slide"
+    data-bs-ride="carousel"
+    data-bs-interval="2500"
+  >
+    <div class="carousel-inner">
+      <div
+        class="carousel-item"
+        *ngFor="let img of imagens; let i = index"
+        [class.active]="i === 0"
+      >
+        <div class="imagem-container">
+          <img
+            [src]="img.src"
+            class="d-block w-100 imagem-ajustada"
+            alt="Slide {{ i + 1 }}"
+          />
+        </div>
+        <div>
+          <span class="legenda-footer mt-0">
+            {{ img.legenda }}
+          </span>
+        </div>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carrosel"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carrosel"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Próximo</span>
+    </button>
+  </div>
+
+</div>
+
+

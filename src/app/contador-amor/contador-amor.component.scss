@@ -51,13 +51,91 @@
   height: 1em;
   width: 1.2ch;
   text-align: center;
-  outline:1px solid #000;
+  outline: 1px solid #000;
   color: #0000;
-  text-shadow:0 0 0 #000;
+  text-shadow: 0 0 0 #000;
   overflow: hidden;
   animation: l4 2s infinite linear;
 }
 .loader::before {
   animation-duration: 4s;
 }
+// style do dialog
+.containerDialog {
+  background: linear-gradient(145deg, #1b1b2f, #162447);
+  color: #e0e0e0;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 6px #a6caff;
+  margin-bottom: 10px;
+}
+
+.content {
+  background: linear-gradient(145deg, #1b1b2f, #162447);
+  color: #e0e0e0;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subtitle {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.date-field {
+  width: 100%;
+  max-width: 300px;
+}
+
+mat-form-field {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+mat-hint {
+  color: #cccccc;
+}
+
+mat-dialog-actions {
+  padding: 0 24px 16px;
+}
+
+button[color="primary"] {
+  background-color: #6c63ff;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(108, 99, 255, 0.4);
+  border-radius: 8px;
+}
+button[color="primary"] {
+  background: linear-gradient(90deg, #7f00ff, #e100ff);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 8px rgba(255, 0, 255, 0.3); }
+  50% { box-shadow: 0 0 16px rgba(255, 0, 255, 0.6); }
+  100% { box-shadow: 0 0 8px rgba(255, 0, 255, 0.3); }
+}
+.mdc-text-field--filled:not(.mdc-text-field--disabled){
+  background-color: invisible;
+  border-radius: 8px;
+  padding: 0 16px;
+}
+.mdc-text-field--filled:not(.mdc-text-field--disabled){
+  background-color:  --mdc-filled-text-field-container-color --mat-sys-surface-variant;/* !important para garantir que os estilos sejam sobrepostos */
+  border: none !important; /* Remove a borda também, se houver */
+}

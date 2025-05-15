@@ -1,0 +1,97 @@
+.imagem{
+    width: 30%;
+    height: 30%;
+    object-fit: cover;
+}
+/* contagem do amor */
+.fundo {
+  height: 100vh;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://www.transparenttextures.com/patterns/stardust.png")
+    repeat;
+  z-index: 1;
+  opacity: 0.7;
+  animation: moveStars 100s linear infinite; /* Animação das estrelas */
+}
+
+/* Efeito de animação para o movimento das estrelas */
+@keyframes moveStars {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 1000px; /* Aumento do movimento da imagem */
+  }
+}
+
+// Carrosel
+.carousel {
+   max-width: 800px;
+   max-height:1000px ;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  margin-left: 20%;
+  margin-right: 10%;
+  margin-top: 1%;
+
+
+  .carousel-item {
+    position: relative;
+    justify-content: center !important; // centraliza horizontalmente
+    align-items: center !important; // centraliza verticalmente
+    min-height: 100vh;
+
+    .imagem-container {
+      position: relative;
+
+      .imagem-ajustada {
+        width: 30%;
+        max-height: 850px;
+        object-fit: cover;
+
+        justify-content: center !important;
+        align-items: center !important;
+        display: flex !important;
+      }
+
+      .legenda-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 12px;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff!important;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 500;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+      }
+    }
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: invert(1);
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%;
+  }
+}
+::ng-deep .legenda-footer {
+  color: rgb(255, 255, 255) !important;  /* Exemplo com cor vermelha */
+}

@@ -1,4 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
 
+// Somente depois de tudo isso, você pode ter estilos globais
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// style do datepicker
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: transparent !important;
+
+}
+.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: #9da0a4 !important;
+}
+:root {
+  --mdc-filled-text-field-container-color: #9da0a4; // fundo do input
+  --mdc-filled-text-field-focus-active-indicator-color: #9da0a4; // linha ao focar
+  --mdc-filled-text-field-caret-color: #9da0a4; // cursor
+  --mdc-filled-text-field-input-text-color: #9da0a4; // texto
+  --mdc-filled-text-field-label-text-color: #9da0a4; // label
+}
+.mat-mdc-icon-button {
+  background-color: transparent !important;
+  color: #9da0a4 !important;
+}

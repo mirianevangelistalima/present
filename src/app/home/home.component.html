@@ -15,5 +15,18 @@
     <div style="color: aliceblue">
       {{ textoResult() }}
     </div>
+
+    <!-- const dataEspecial = new Date(2023, 4, 16); // 4 = Maio porque janeiro é 0 -->
+    @if (selectedDate()?.getTime() === dateEspecial.getTime()) {
+      <div class="botoes-amor">
+          <!-- <button class="botao-espacial" routerLink="/museu">
+            <mat-icon>next</mat-icon> Proximo
+          </button> -->
+        <div class="mt-5 botao-espacial">
+          <span title="Decolar" (click)="startTravelTime()" >🚀</span>
+        </div>
+
+      </div>
+      }
   </div>
 </div>
